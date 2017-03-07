@@ -54,7 +54,7 @@
 			}))
 		})
 		ws.addEventListener('message', x => {
-			console.log(x.data)
+			ractive.set('ticker', x.data)
 		})
 	</script>
 </body>
