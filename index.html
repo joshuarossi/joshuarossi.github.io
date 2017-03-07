@@ -7,8 +7,6 @@
 </head>
 
 <body>
-	<h1>Ractive test</h1>
-
 	<!--
 	1. This is the element we'll render our Ractive to.
 	-->
@@ -21,7 +19,24 @@
 	just about anything except 'text/javascript'
 	-->
 	<script id='template' type='text/ractive'>
-		<p>Ticker: {{ticker}}</p>
+		<p>Ticker</t>
+<table>
+  <tr>
+    <th></th>
+    <th>Bid</th>
+    <th>Ask</th>
+  </tr>
+  <tr>
+    <td>Price</td>
+    <td>{{bid_price}}</td>
+    <td>{{ask_price}}</td>
+  </tr>
+  <tr>
+    <td>Amount</td>
+    <td>{{bid_amount}}</td>
+    <td>{{ask_amount}}</td>
+  </tr>
+</table>
 	</script>
 
 	<script src='./ractive.min.js'></script>
@@ -42,20 +57,24 @@
 
 			// Here, we're passing in some initial data
 			data: {
-				ticker: name
+				ticker: {
+					bid_price,
+					bid_amount,
+					ask_price,
+					ask_amount
+				}
 			}
 		})
 		ws = new WebSocket('wss://api.bitfinex.com/ws/2')
 		ws.addEventListener('open', x => {
 			ws.send(JSON.stringify({
 				event: 'subscribe',
-				symbol: 'tBTCUSD',
+				symbol: 'tXMRUSD',
 				channel: 'ticker'
 			}))
 		})
 		ws.addEventListener('message', x => {
 			let ticker = JSON.parse(x.data)[1]
-			console.log(ticker)
 			if (ticker != 'hb') {
 				ractive.set('ticker', ticker)
 			}
