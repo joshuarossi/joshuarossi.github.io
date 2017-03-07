@@ -21,17 +21,9 @@
 	just about anything except 'text/javascript'
 	-->
 	<script id='template' type='text/ractive'>
-		<p>Hello, {{name}}!</p>
+		<p>Ticker: {{ticker}}</p>
 	</script>
 
-	<!--
-	3. You can always get the most recent stable version from the URL below.
-	If you want the newest features (unstable!), use the 'edge' version instead:
-
-	http://cdn.ractivejs.org/edge/ractive.min.js
-
-	If you need IE8 support, change 'ractive' to 'ractive-legacy'.
-	-->
 	<script src='./ractive.min.js'></script>
 
 	<!--
@@ -39,6 +31,7 @@
 	loaded the library - now it's time to build our Hello World app.
 	-->
 	<script>
+		var name = 'josh'
 		var ractive = new Ractive({
 			// The `el` option can be a node, an ID, or a CSS selector.
 			el: '#container',
@@ -49,9 +42,10 @@
 
 			// Here, we're passing in some initial data
 			data: {
-				name: 'world'
+				ticker: name
 			}
-		});
+		})
+
 	</script>
 </body>
 
