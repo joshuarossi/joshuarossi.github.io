@@ -78,6 +78,12 @@
 		ws.addEventListener('message', x => {
 			let ticker = JSON.parse(x.data)[1]
 			if (ticker != 'hb') {
+				x = {
+					bid_price: ticker[0],
+					bid_amount: ticker[1],
+					ask_price: ticker[2],
+					ask_amount: ticker[3]
+				}
 				ractive.set('ticker', ticker)
 			}
 		})
