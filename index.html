@@ -54,7 +54,8 @@
 			}))
 		})
 		ws.addEventListener('message', x => {
-			let ticker = x.data[1]
+			let ticker = JSON.parse(x.data)[1]
+			console.log(ticker)
 			if (ticker != 'hb') {
 				ractive.set('ticker', ticker)
 			}
