@@ -20,23 +20,25 @@
 	-->
 	<script id='template' type='text/ractive'>
 		<p>Ticker</t>
-<table>
-  <tr>
-    <th></th>
-    <th>Bid</th>
-    <th>Ask</th>
-  </tr>
-  <tr>
-    <td>Price</td>
-    <td>{{bid_price}}</td>
-    <td>{{ask_price}}</td>
-  </tr>
-  <tr>
-    <td>Amount</td>
-    <td>{{bid_amount}}</td>
-    <td>{{ask_amount}}</td>
-  </tr>
-</table>
+			{{ticker}}
+			<table>
+				<tr>
+					<th></th>
+					<th>Bid</th>
+					<th>Ask</th>
+				</tr>
+				<tr>
+					<td>Price</td>
+					<td>{{bid_price}}</td>
+					<td>{{ask_price}}</td>
+				</tr>
+				<tr>
+					<td>Amount</td>
+					<td>{{bid_amount}}</td>
+					<td>{{ask_amount}}</td>
+				</tr>
+			</table>
+			{{/ticker}}
 	</script>
 
 	<script src='./ractive.min.js'></script>
