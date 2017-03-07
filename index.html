@@ -47,12 +47,12 @@
 		})
 		ws = new WebSocket('wss://api.bitfinex.com/ws/2')
 		ws.addEventListener('open', x => {
-			ws.send({
+			ws.send(JSON.stringify({
 				event: 'ping'
-			})
+			}))
 		})
-		ws.addEventListener('message', x=>{
-			console.log(x)
+		ws.addEventListener('message', x => {
+			console.log(x.data)
 		})
 	</script>
 </body>
