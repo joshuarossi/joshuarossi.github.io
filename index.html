@@ -48,7 +48,9 @@
 		ws = new WebSocket('wss://api.bitfinex.com/ws/2')
 		ws.addEventListener('open', x => {
 			ws.send(JSON.stringify({
-				event: 'ping'
+				event: 'subscribe',
+				symbol: 'tBTCUSD',
+				channel: 'ticker'
 			}))
 		})
 		ws.addEventListener('message', x => {
