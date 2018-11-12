@@ -7,8 +7,10 @@
     "gh-pages": "^2.0.1",
     "react": "next",
     "react-dom": "next",
-    "react-scripts": "2.1.1",
-    "scheduler": "0.11.0-alpha.0"
+    "react-scripts": "2.1.1"
+  },
+  "resolutions": {
+    "react-dom/scheduler": "0.11.0-alpha.0"
   },
   "scripts": {
     "predeploy": "npm run build",
