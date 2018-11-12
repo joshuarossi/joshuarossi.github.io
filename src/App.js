@@ -1,9 +1,14 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const useDocumentTitle = title => {
+  useEffect(() => (document.title = title));
+};
+
 const App = () => {
   const [count, setCount] = useState(0);
+  useDocumentTitle(count);
   return (
     <Suspense fallback={logo} maxDuration={300}>
       <div className="App">
