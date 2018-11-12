@@ -1,15 +1,20 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
+  const [count, setCount] = useState(0);
   return (
-    <Suspense fallback={logo} maxDuratio={300}>
+    <Suspense fallback={logo} maxDuration={300}>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
+            <br />
+            <button onClick={() => setCount(count - 1)}>-</button>
+            {count}
+            <button onClick={() => setCount(count + 1)}>+</button>
           </p>
           <a
             className="App-link"

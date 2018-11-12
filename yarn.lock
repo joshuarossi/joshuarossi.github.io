@@ -7189,6 +7189,13 @@ saxes@^3.1.3:
   dependencies:
     xmlchars "^1.3.1"
 
+scheduler@0.11.0-alpha.0:
+  version "0.11.0-alpha.0"
+  resolved "http://nexus.alphapoint.com:8087/repository/npm-group/scheduler/-/scheduler-0.11.0-alpha.0.tgz#7b132c726608993471db07866f2d59a52b9e190b"
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
 scheduler@^0.11.0-alpha.0:
   version "0.11.0"
   resolved "http://nexus.alphapoint.com:8087/repository/npm-group/scheduler/-/scheduler-0.11.0.tgz#def1f1bfa6550cc57981a87106e65e8aea41a6b5"
