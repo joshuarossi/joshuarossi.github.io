@@ -1,14 +1,18 @@
 {
   "name": "joshuarossi.github.io",
+  "homepage": "https://joshuarossi.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "next",
     "react-dom": "next",
     "react-scripts": "2.1.1",
     "scheduler": "0.11.0-alpha.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
